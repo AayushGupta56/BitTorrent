@@ -8,7 +8,7 @@
 using namespace std;
 
 int main(){
-   cout<<"hello";
+  
    //creating socket
    int listening_socket,client_socket;
    listening_socket=socket(AF_INET,SOCK_STREAM,0);
