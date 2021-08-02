@@ -37,6 +37,7 @@ int main(){
       cerr<<"Cant't connect";
       return 0;
            }
+     else{cout<<"Connected";}      
 
       //do while loop :send and recv data
 
@@ -47,7 +48,7 @@ int main(){
      do{
      	
      	//prompt user to send something 
-     	cout<<"> ";
+     	
      	getline(cin ,msg);
      	if(msg.length()>0){
 
