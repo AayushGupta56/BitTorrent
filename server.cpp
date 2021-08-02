@@ -8,7 +8,7 @@
 using namespace std;
 
 int main(){
-  
+   
    //creating socket
    int listening_socket,client_socket;
    listening_socket=socket(AF_INET,SOCK_STREAM,0);
@@ -42,9 +42,10 @@ int main(){
    	cout<<"can't accept";
    	return 0;
    }
+   else{cout<<"Connected"<<endl;}
    //close the listning socket
    close(listening_socket);
-
+     
    //while loop send recieve
     char input[400];
     string msg;
@@ -56,7 +57,7 @@ int main(){
        if(char_recieved>0){
        //sending same mssg back
        	int sent= send(client_socket,input,char_recieved+1,0);
-       cout<<"sent "<<sent<<"bytes to you"<<inet_ntoa(client.sin_addr)<<endl;//???
+       cout<<"sent "<<sent<<" bytes to you "<<inet_ntoa(client.sin_addr)<<endl;//???
 
 
        }
